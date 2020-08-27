@@ -1,0 +1,249 @@
+:root {
+  --animate-delay: 0.4s;
+}
+
+
+html {
+  --text-white-black:white;
+  --bacg-trans-white:transparent;
+  --nav-shadow: none;
+  --ligthmode: white;
+  --txt-black: rgba(0, 0, 0, 0.75);
+  --txt-color1: #2de7ff;
+  --txt-color2: #f371ff;
+  --txt-color3: #ffc423;
+  --txt-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+
+  --animate-delay: 0.4s ease-in-out;
+}
+
+html.Jscrolled {
+  --text-white-black:rgba(0, 0, 0, 0.75);
+  --bacg-trans-white:white;
+  --nav-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggler {
+  padding: 0;
+  border : none; 
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar {
+  background-color: var(--bacg-trans-white) !important;
+  box-shadow: var(--nav-shadow);
+  transition: var(--animate-delay);
+}
+
+/* .navbar.Jscrolled {
+  background-color: var(--ligthmode) !important;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+} */
+
+.logo {
+  fill: var(--text-white-black);
+  width: 53px;
+}
+
+.navbar-brand {
+  color: var(--text-white-black)!important;
+}
+
+.menu-btn__burger {
+  display: flex;
+  width: 2rem;
+  height: .2rem;
+  background: var(--text-white-black);
+  border-radius: 4px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: .2rem;
+  background: var(--text-white-black);
+  border-radius: 4px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+
+/* ----Button animation------ */
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-3rem);
+  background: transparent;
+  box-shadow: none;
+
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+
+}
+ 
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+} 
+
+.nav-link {
+  color: var(--text-white-black) !important;
+  /* transition: var(--animate-delay); */
+  /* margin-right: 1%; */
+  text-align: right;
+  text-shadow: var(--txt-shadow);
+}
+
+.nav-link.Jscrolled {
+  text-shadow: none;
+  text-align: center;
+/*   margin-left: 0; */
+  border-bottom: 0.5px solid var(--txt-black);
+}
+
+.nav-link:hover {
+  font-weight: bolder;
+/*   animation-delay: 0s;
+  transition: none; */
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+/* -----------Carousel------------ */
+
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel .imagenes {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.leters {
+  display: flex;
+  flex-direction: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.leters h2 {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.carousel-caption {
+  padding-bottom: 30vh;
+  text-shadow: var(--txt-shadow);
+}
+
+.carousel-caption h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.carousel-caption h2 span {
+  color: var(--ligthmode);
+}
+
+.carousel-caption p {
+  font-size: 23px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-caption p span {
+  color: var(--txt-color1);
+}
+
+.carousel-caption .boton {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ligthmode) !important;
+  background-color: rgba(0, 0, 0, 0.17);
+}
+
+.boton1:hover {
+  background-color: var(--txt-color1) !important;
+}
+
+.boton2:hover {
+  background-color: var(--txt-color2) !important;
+}
+
+.boton3:hover {
+  background-color: var(--txt-color3) !important;
+}
+
+.carousel-indicators .active {
+  background-color: var(--ligthmode);
+}
+
+/* ------Info 1--------- */
+
+
+
+.info1 h1 {
+ /*  margin: 40px 0px 0px 0px; */
+ padding-top: 1.3rem;
+} 
+
+.info1 p {
+  /* margin: 10px 30px 30px 30px; */
+  padding: 0rem 1.5rem 0rem 1.5rem;
+} 
+
+.collapse1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.info1 button {
+  align-self: center;
+} 
+
+.tarjeta {
+  flex-direction: row;
+}
+
+.card-img-top {
+  border-radius: 100%;
+}
+
+ .card {
+ /* display: table-cell; */
+ 
+ border: none;
+}
+
+/* .card-img-top {
+  margin: 0 1rem 0 1rem;
+} */
+
+.revews h1 {
+  margin-bottom: 1.3rem;
+}
+
+
+/* ----- @media -------- */
+
