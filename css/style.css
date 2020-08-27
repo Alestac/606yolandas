@@ -73,7 +73,7 @@ html.Jscrolled {
 }
 
 .menu-btn__burger::before {
-  transform: translateY(-10px);
+  transform: translateY(-12px);
 }
 
 .menu-btn__burger::after {
